@@ -1,5 +1,5 @@
 import "./App.scss";
-import { github, slack, zuri, I4G } from "./assets";
+import { github, slack, zuri, I4G, hero, dots, share} from "./assets";
 function App() {
 	return (
 		<div className="App">
@@ -8,7 +8,7 @@ function App() {
 					<img
 						height={100}
 						width={100}
-						src="/hero.jpg"
+						src={hero}
 						alt="profile photo"
 						id="profile__img"
 					/>

@@ -1,5 +1,13 @@
+
+.App{
+	margin-top: 2rem;
+}
+
 .container {
 	margin: 0 3rem;
+	@media (max-width:400px) {
+		margin: 0 1.5rem;
+	}
 }
 p {
 	font-weight: bold;
@@ -8,9 +16,28 @@ p {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	position: relative;
 	color: #000;
 	img {
 		border-radius: 50%;
+	}
+	&::after{
+		content: '';
+		background: url(assets/share.png)center no-repeat;
+		height: 30px;
+		width: 30px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border: 1px solid #cecccc;
+		border-radius: 50%;
+	
+	}
+	@media (max-width:400px) {
+		&::after{
+		background: url(assets/dots.png)center no-repeat;
+			
+		}
 	}
 }
 
@@ -50,7 +77,7 @@ p {
 }
 .foo{
 	margin: 0 1.5rem;
-	margin-top: 5rem;
+	margin-top: 5rem !important;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -60,6 +87,15 @@ p {
 	p{
 		color: #a09c9c;
 		font-size: 14px;
+	}
+	@media (max-width:600px) {
+		img{
+			scale:.8;
+		}
+		margin: 0 0.5rem;
+	}
+	@media (max-width:500px) {
+		flex-direction: column;
 	}
 }
 
